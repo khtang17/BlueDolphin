@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Virtual Screening{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Services</li>
+      <li class="breadcrumb-item active" aria-current="page">Virtual Screening</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Virtual Screening</h3>
+    <div class="row">
+        <div class ="col-12 col-sm-6 col-md-8">
+       <h4>How does a virtual screening campaign work?</h4>
+            <p> Every virtual screening project, like every drug discovery project, is unique. It will depend not only of the goals of the project, but also the availability of information, the quality of the structure of the target, biases for - or against - certain kinds of chemistry, and so on. Nevertheless, many virtual screening projects often unfold along similar lines, at least initially. Here is a sketch of a typical scenario.</p>
+
+            <p><b>First we identify the target.</b>This will often be a crystal structure, but could also be a comparative model, perhaps involving manual curation. It is possible to dock to non-x-ray models, either comparative, manually curated, or even NMR. Deciding whether a model is viable, and which one to use, is is often part of the initial consultation.</p>
+            <p><b>Second, we collect any available control information</b>, such as experimentally confirmed actives or inactives, often with IC50 or Ki values. If there is the luxury of additional crystal structures, this can often be extremely helpful for calibrating the docking model. All relevant information should be reviewed at this stage as the basis for modeling.</p>
+            <p><b>Third, we perform calibration docking</b>, in which known actives are docked and scored as a basis for judging the suitability of the model. A database of decoys is generated, having similar physical properties to the actives, yet being different topologically, to test whether actives could be retrieved from a database of physically similar compounds.</p>
+            <p><b>Fourth, we select a database to screen</b>, based on the needs of the project. Our bias is towards commercially available compounds, such as are in ZINC, because they can be rapidly purchased and tested. We often like to dock fragments - small molecules under 250 Da - as a means of studying the binding site and "seeing what sticks" before docking bigger "lead-like" compounds that would actually be purchased for experimental testing.</p>
+            <p><b>Preliminary Screen</b> Armed with this information, we then embark on a screen, that usually takes several weeks to complete and curate. We send a preliminary report to our clients, that usually includes both the raw virtual screening output as well as our own analysis, in which we pick a small number of compounds that we find particularly interesting. Often, we meet or have a conference call soon after presenting the preliminary report to discuss the results and the next steps to take. We explain to the client what we see in the results, and make specific recommendations of compounds to test. We give the client all the information necessary to purchase the compounds, which are ordered by the client directly from compound vendors or compound brokers.</p>
+            <p><b>Experimental testing of predictions by the client.</b> At this point one of two things typically happens. Often, the client will like the compounds we have proposed, and proceeds to purchase them for testing. Occasionally, the client will express some concern about the compounds we have identified, and will request changes be made to bias away from one or more scaffolds or functional group classes, resulting in significant changes in the proposed compounds.</p>
+            <p><b>Experimental results become available.</b> This is where the rubber hits the road! We are eager to hear of the results of our predictions, and are thrilled to have helped the client discover new chemistry. We can often help to find compounds that are similar to the experimental hits, for example using substructure analysis or molecular similarity measures to other commercially available compounds. Sometimes it is appropriate to dock a small library of similar compounds at this stage.</p>
+            <p><b>Final Screen, informed by experiment</b> If more work is requested, we do that - subject to negotiation, and, obviously, not without limitation. This varies signfiicantly from project to project. When the client has tested the compounds, they tell us what they can about the results, to help us refine the docking model, and, often, the library docked. We then perform a final screen, informed as much as possible by the first round of experimental testing.</p>
+            <p>As the project nears the final report, follow on projects may be discussed to leverage the results obtained. Since this is research, projects do vary considerably in how they unfold. To get an idea of some of the ways past projects have gone, please see our <a href="#">success stories</a> page.</p>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/figb.png') }}" border="0">
+        </div>
+    </div>
+</div>
+{% endblock %}

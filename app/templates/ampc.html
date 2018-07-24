@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block title %}AmpC{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Success Stories</li>
+      <li class="breadcrumb-item active" aria-current="page">AmpC beta-Lactamase</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Success Stories : AmpC β-lactamase</h3>
+    <h4>Target: β-lactamase</h4>
+    <p>AmpC β-lactamase hydrolyzes penicillin and cephalosporin antibiotics, conferring resistance against these drugs to bacteria that express the enzyme. Drugs like clavulanic acid, sulbactam and tazobactam have been long used to reverse β-lactamase-based resistance by inhibiting the enzyme, but these inhibitors are essentially ineffective against class C β-lactamases, such as AmpC. As use of the inhibitors increased, expression of AmpC has spread. Worse still, for many hospital pathogens such as E. cloacae, the inhibitors actually up-regulate the expression of AmpC, leading to overproduction of the enzyme they were meant to inhibit. Thus there is a strong motivation to discover novel inhibitors, unrelated to β-lactams such as penicillins or indeed the inhibitors such as clavulanic acid. In an effort to do so, the Shoichet Lab targeted the structure of AmpC for docking screens.</p>
+    <h4>Site & Ligand Innovations</h4>
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-8">
+        <p>AmpC is a large and open active site (<b>figure 1</b>)
+        for which only covalent inhibitors like the &beta;-lactams, and pseudo-covalent
+        inhibitors like the boronic acids, were known.   On the other hand, many ligand
+         bound structures were available, many of them in fact determined by the student
+        in the lab undertaking the docking screens-Rachel Powers.   Rachel used these
+        structures to assign hot spots in the site, which she subsequently exploited in
+        the docking program (what was then NWU_DOCK).   The multiple known structures,
+        and their often high quality, allowed her to also determine the positions of
+        several ordered water molecules, which were also used in the docking. <br>
+
+                On the ligand side, the major issue was, as always, to calculate parameters for
+        the 250,000 Available Chemical Directory ligands.  But this had been largely
+        done for <a href="{{ url_for('ptp1b') }}">PTP-1B</a>, and we could use what was essentially exactly the same database.
+         As with PTP-1B, about 1000 conformations were calculated for each molecule.
+        </p>
+    </div>
+    <div class="col-6 col-md-4">
+        <img src="{{ url_for('static', filename='images/ampc1.png') }}" border="0">
+    </div>
+        </div>
+    <h4>Results</h4>
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-8">
+        <p>In this AmpC screen, the one decent inhibitor to come out
+        of docking was right for the right reasons: it was a competitive inhibitor
+        whose predicted and subsequent crystallographic structure corresponded
+        closely (<b>figure 2</b>).  Also, the chemistry of this compound is novel, being
+        dissimilar to &beta;-lactams or any previously known class of inhibitors.
+        Conversely, the hit rate was low (1/56) and the potency was modest.  This
+        highlights both the strengths and the weaknesses of the method.  Docking
+        can discover genuinely novel scaffolds for proteins with good structures,
+        which is a strength.  On the other hand, because of its many approximations,
+        any prediction for a given compound is unreliable and hit rates will vary.
+        It is important to be able test multiple docking predictions, with a reliable
+        assay, to have some confidence that new inhibitors will be found.
+        </p>
+    </div>
+    <div class="col-6 col-md-4">
+        <img src="{{ url_for('static', filename='images/ampc2.png') }}" border="0">
+    </div>
+        </div>
+    <h4>Literature</h4>
+        <p>
+        This work was published in :<br>
+            Powers RA, Morandi F, Shoichet BK.
+        Structure-based discovery of a novel, non-covalent inhibitor
+        of AmpC &beta;-lactamase. <i>Structure</i><b> 10</b> (7), 1013-23 (2002).
+
+        [<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=12121656&dopt=Abstract">Pubmed</a>
+        | <a href="http://dx.doi.org/10.1016/S0969-2126(02)00799-2">DOI</a>
+        | <a href="http://www.pdb.org/pdb/cgi/explore.cgi?pdbId=1L2S">PDB 1L2S</a>
+        | <a href="http://shoichetlab.compbio.ucsf.edu/publications/powers_2002.pdf">Download PDF</a>]
+
+        </p>
+
+</div>
+{% endblock %}

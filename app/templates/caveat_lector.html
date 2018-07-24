@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Caveat Lector{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Caveat Lector</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Caveat Lector</h3>
+    <div class="row">
+        <div class ="col-12 col-sm-6 col-md-8">
+            <h4>A repectful warning to the prospective user of virtual screening</h4>
+            <p>Despite numerous successes, virtual screening retains important weaknesses and continues to be challenging to use even for "good" targets. For certain types of projects (details below), virtual screening is unlikely to be successful, in our view. This is one reason why we always have a frank discussion about the pros and cons of a project before we agree to start.</p>
+            <p>Without being exhaustive, here are some cases where we are inclinded to discourage the client from pursuing a virtual screening project with us. For example:</p>
+            <ol>
+                <li>The binding site is a protein-protein binding interface and/or there does not appear to be a deep invagination in the putative binding site.</li>
+                <li>The experimental assay is unreliable.</li>
+                <li>There is evidence that the binding site can radically change shape, and/or and the nature of this change has not been fully characterized, e.g. P450s.</li>
+                <li>The ligand-protein interaction is controlled more by electronics than by sterics, e.g., Fe coordination in NO-synthases.</li>
+            </ol>
+            <p>While not complete "show stoppers", we would strongly caution our client to reconsider the project if any of these conditions were true. Sometimes, by working together, the project can be modified to have a higher likelihood of success - for example, by targeting an alternative site on the protein or by delaying the work until a crystal structure becomes available, as appropriate.</p>
+            <p>In other cases, while we do not outright reject going forward with a virtual screening campaign, we caution our client that the project is particularly challenging. For example:</p>
+            <ol>
+                <li>There are no known binders for the site.</li>
+                <li>Assay data are contractictory or confusing, leading to speculation that the assay results cannot be trusted.</li>
+                <li>The site is so big that even a 500 Dalton small molecule does not fill it completely.</li>
+                <li>The site is very hydrophobic, with few polar "handles" for specificity.</li>
+                <li>The only available structure is a homology model or NMR structure, and there is some concern that the model of the binding site may be unreliable.</li>
+                <li>The binding site is on a protein domain interface.</li>
+                <li>A reasonable model of the known binders in putative binding site cannot be built.</li>
+            </ol>
+            <p>In these cases, we may still be prepared to proceed with the project, but we would advise our client to obtain additional or corroborating experimental evidence as soon as possible, to help guide the project.</p>
+            <a href="#">Contact us</a>
+
+        </div>
+         <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/sdff.png') }}" border="0">
+        </div>
+
+    </div>
+</div>
+    {% endblock%}

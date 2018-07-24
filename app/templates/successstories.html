@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block title %}Success Stories{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Success Stories</li>
+  </ol>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Success Stories</h3>
+            <p>Docking can be used to discover novel ligands. We illustrate some of
+        the advantages of docking, while listing some problem areas, in several
+        projects undertaken by the Shoichet lab, using very similar technology
+        to that used by Blue Dolphin.  There are other cases using other docking
+        techniques undertaken by other labs, both in industry and in academia,
+        in the literature. For example, we think highly of many of the docking papers by
+
+        <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Kuhn+LA%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+        Leslie Kuhn</a>,
+
+        <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Olson+AJ%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+        Art Olson</a>,
+
+        <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Abagyan+RA%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+        Ruben Abagyan</a>,
+
+        <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Vieth+M%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+        Michel Vieth</a> and
+
+        <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Stahl+M%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+        Martin Stahl</a>.
+        We focus on these ones below because we know them best, and we can reveal
+        the gory details because they are entirely public. We use each story
+        to illustrate the various ways in which discovery projects proceed.
+        </p>
+  <table class="table">
+      <tr>
+          <td><a href="model.shtml">
+              <img src="{{ url_for('static', filename='images/ptp1bicon.png') }}" border="0"></a>
+          </td>
+          <td><p><b>Target:</b>Protein tyrosine phosphatase 1B (PTP-1B),
+                a target for type II diabetes.
+                This case study illustrates a best-case scenario for docking.
+                </p>
+                <p>
+                <b>Database:</b>400,000 compounds screened via HTS compared to
+                 250,000 commercially available compounds docked.
+                </p>
+                <p><b>Reference:</b>
+                <font size=-1>Doman TN, McGovern SL, Witherbee BJ,
+                Kasten TP, Kurumbail R,
+                Stallings WC, Connolly DT, Shoichet BK.
+                Molecular docking and high-throughput screening for novel inhibitors
+                 of protein tyrosine phosphatase-1B. <i>J Med Chem</i><b> 45</b>
+                (11), 2213-21 (2002).
+                [<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=12014959&dopt=Abstract">Pubmed</a>
+                 | <a href="http://dx.doi.org/10.1021/jm010548w">DOI</a>
+                | <a href="http://www.nature.com/cgi-taf/DynaPage.taf?file=/nrd/journal/v1/n8/full/nrd877_fs.html"><i>NRDD</I> Highlight</a>
+                 | <a href="http://www.facultyof1000.com/article/12014959/evaluation">Faculty of 1000</a>
+                 | <a href="http://shoichetlab.compbio.ucsf.edu/publications/doman_2002.pdf">Download PDF</a>]
+                </font>
+                </p>
+          </td>
+      </tr>
+      <tr>
+          <td><a href="ampc.shtml">
+                <img border="0" src="{{ url_for('static', filename='images/figc.png') }}"></a>
+          </td>
+          <td><p><b>Target:</b> AmpC beta lactamase. A target for antibiotic resistance.
+                Illustrates discovery of completely novel chemistry. Docking made a
+                correct prediction for the right reasons.
+                </p>
+                <p>
+                <b>Database:</b> 250,000 commercially available compounds (ACD + Specs + Maybridge)
+                </p>
+                <p><b>Reference:</b>
+                <font size=-1>
+                Powers RA, Morandi F, Shoichet BK.
+                Structure-based discovery of a novel, non-covalent inhibitor
+                of AmpC &beta;-lactamase. <i>Structure</i><b> 10</b> (7), 1013-23 (2002).
+                <br />
+                [<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=12121656&dopt=Abstract">Pubmed</a>
+                | <a href="http://dx.doi.org/10.1016/S0969-2126(02)00799-2">DOI</a>
+                | <a href="http://www.pdb.org/pdb/cgi/explore.cgi?pdbId=1L2S">PDB 1L2S</a>
+                | <a href="http://shoichetlab.compbio.ucsf.edu/publications/powers_2002.pdf">Download PDF</a>]
+                </font>
+                </p>
+            </td>
+      </tr>
+      <tr>
+          <td><a href="tm0936.shtml">
+                <img border="0" src="{{ url_for('static', filename='images/tm0936icon.png') }}" /></a></td>
+          <td><p><b>Target:</b>Tm0936: Substrate discovery and assignment of
+                function from docking.
+                </p>
+                <p><b>Database:</b>Metabolites (KEGG) represented as high energy
+                intermediates during nucleophilic attack by a hydroxide nucleophile.
+                </p>
+                <p><b>Reference:</b>
+                <font size=-1>
+                JC Hermann, R Mart-Arbona, AA Fedorov, E Federov, SC Almo,
+                BK Shoichet, FM Raushel. Structure-based activity prediction
+                for an enzyme of unknown function. Nature, Aug 16 (2007).
+                </font>
+            </td>
+
+      </tr>
+
+
+
+  </table>
+
+
+
+</div>
+{% endblock %}

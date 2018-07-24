@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}Founders{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Founders</li>
+  </ol>
+</nav>
+
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3 class="article-title">Founders</h3>
+    <div class="row container-fluid">
+        <div class="col-12 col-sm-6 col-md-8">
+                <p>
+        Blue Dolphin Lead Discovery LLC was founded in 2000 as a fee-for-service
+        adjunct to academic work being conducted in the Shoichet Lab, then
+        at Northwestern University.  Much of the original work was conducted
+        through Northwestern University itself by members of the lab.  In
+        2003 the lab moved to UCSF, which discourages fee-for-service work,
+        and consequently Blue Dolphin became entirely separate from
+        the academic group.  Blue Dolphin continues to use virtual screening
+        technology developed by the Shoichet Lab, as licensed from UCSF.
+        Projects undertaken by Blue Dolphin are vetted to ensure that they
+        neither overlap with Shoichet Lab projects nor with IP held by the
+        University of California.  One of the purposes of the company is to
+        continue to allow close collaborations with industrial groups.
+
+        Blue Dolphin was co-founded by Drs. John Irwin and Brian Shoichet,
+        both of whom have extensive experience in molecular docking, virtual
+        screening and inhibitor design.
+
+        </p>
+
+        <p>
+            <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Irwin+JJ%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+            Inhibitor discovery and docking papers published by John Irwin</a>.
+        </p>
+        <p>
+            <a target=_blank href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=DetailsSearch&Term=Shoichet+BK%5BAuthor%5D+AND+docking%5BAll+Fields%5D&WebEnvRq=1">
+            Inhibitor discovery and docking papers published by Brian Shoichet</a>.
+        </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/alr2a.png') }}" border="0" />
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

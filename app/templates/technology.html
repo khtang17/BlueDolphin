@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}Technology{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Technology</li>
+  </ol>
+</nav>
+ <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+     <h3>Technology</h3>
+     <div class="row">
+     <div class="col-12 col-sm-6 col-md-8">
+         <p>
+            Virtual screening requires three things:
+            <ul>
+                <li>a target (X-ray structure if available,
+            a comparative model otherwise)</li>
+                <li>a database of small molecules (we use ZINC)</li>
+                <li>a program to orient and score the molecules
+            in the protein binding site (we use DOCK 3.5.54, a
+            verison of UCSF DOCK).</li>
+            </ul>
+                There are good reasons why this approach might
+                not work (see
+                <a href="caveat_lector.shtml">caveat lector</a>)
+                such as problems in sampling relevant
+                poses, and problems with the scoring function. Despite these
+                 problems, there are a growing number of success stories in
+                the literature using this technique. One reason it has been successful
+                is that failure is relatively cheap when using commercially
+                available libraries, such as ZINC. .  If the first compound
+                purchased and tested does not work, it is a simple matter
+                to move on and test the next in a series of docking-prioritized
+                compounds, all of which are commercially available.
+            <p>
+                For more information of this technology in practice, see
+                <a href="/successstories.shtml">success stories</a>.
+            </p>
+            <p>
+                For more information in its possible problems, see
+                <a href="/caveat_lector.shtml">caveat lector</a>.
+            </p>
+            <p>
+                For possible academic collaborations, and vendors of virtual screening
+                software, both outside of Blue Dolphin, see
+                <a href="otheroptions.shtml">other docking labs and software</a>.
+            </p>
+    </div>
+     <div class="col-6 col-md-4">
+        <img src="{{ url_for('static', filename='images/fig4.png') }}" border="0">
+     </div>
+         </div>
+ </div>
+
+
+
+
+{% endblock %}

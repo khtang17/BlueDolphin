@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}PTP-1B{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Success Stories</li>
+      <li class="breadcrumb-item active" aria-current="page">PTP-1B</li>
+  </ol>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Success Stories : PTP-1B</h3>
+    <h4>Target: Protein tyrosine phosphatase 1B</h4>
+    <p>Protein tyrosine phosphatase 1B (PTP-1B) dephosphorylates the insulin receptor, ending insulin signaling. In mouse knockout studies, the protein reversed insulin resistance, and the enzyme quickly became a hot target for inhibitors that would reverse <b>type II diabetes.</b> The structure was determined by Zhang's group to high resolution, making it appropriate for structure-based techniques. The Shoichet Lab became interested in it at the behest of Dr. Tom Doman and colleagues at Pharmacia, where a high-throughput screening campaign was underway, and they were looking to try a virtual, structure based screen to complement it. We agreed to dock 250,000 commercially available compounds against the target, while at Pharmacia they experimentally screened 400,000 compounds by HTS.</p>
+    <h4>Site & Ligand Innovations</h4>
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-8">
+        <p>The target presents several challenges, and indeed has become a sort of poster child for barely druggable sites. Whereas there is a clear ligand binding groove, the site is overall relatively shallow, as many protein-protein recognition sites, even enzymes, often are. Moreover, the enzyme natively recognizes charged substrates (tyrosine phosphates), and the goals were ligands that were either neutral or mono-anionic. Using standard parameters, the docking program (the precursor of what is now DOCK3.5.54) picked as high-scoring molecules highly charged anions, such as phosphates, phosphonates and sulfonates, which was comforting in a sense, but also not particularly helpful for our goals. We therefore decided to treat the cysteine nucleophile as a charged side chain-something for which there was evidence. This diminished the number of anionic ligands that were found by DOCK, because of the inherent repulsion from the cysteine anion.</p>
+    </div>
+    <div class="col-6 col-md-4">
+        <img src="{{ url_for('static', filename='images/ptp1b_1.png') }}" border="0">
+    </div>
+        </div>
+    <img src="{{ url_for('static', filename='images/ptp1b2.jpg') }}" border="0" class="mx-auto d-block" ><br>
+    <p>On the ligand side, the major issue was to calculate parameters for the 250,000 ligands. This involved calculating partial atomic charges, desolvation energies, and about 1000 conformations for each molecule. We had done this before in the lab, but never under such time pressures, and never with so public a need for high-quality ligand structures and parameters, something that, certainly in retrospect, is critical for structure-based docking. Irrespective of the quality of the docking program, lousy ligand parameters-and it is not easy to find really good ones for hundreds-of-thousands or even millions of disparate small molecules-leads to lousy docking results. This began us on a path of developing automated scripts for database generation, which was the genesis of a project that eventually led to the <a href="zinc15.docking.org">ZINC database.</a></p>
+    <h4>Results</h4>
+    <p>The docking calculation resulted in a ranked list of compounds, from ones that best fit the PTP-1B site, based on electrostatic and non-polar complementarity, down to the 250,000th worst fitting compound. Susan McGovern, Tom Doman and Brian Shoichet looked at the best 1000 of these individually, in their docked poses in the site. Of these, we chose 365 to be tested, experimentally, at the Pharmacia campus in St. Louis. We chose these compounds based on several criteria. Some were chosen simply because they were among the very top scoring compounds by docking score. Some were chosen because we liked the pattern of hydrogen-bond complementarity that we observed in the site. Some were chosen because they spanned both of the presumptive phospho-tyrosine sites in the enzyme.</p>
+    <img src="{{ url_for('static', filename='images/ptp1b_t1.png') }}" border="0" class="mx-auto d-block"><br>
+    <p>Of the 365 docking hits tested, 127 had IC50 values of 100 µM or better, and 18 had IC50 values of 10 µM or better, a hit rate of 35%. The experimental screen discovered 85 inhibitors at the 100 µM level and 6 at the 10 µM level (Table 1). Thus, even in absolute terms docking found more inhibitors than did HTS, and in relative terms the docking hit rate was 1700-fold higher.</p>
+    <h4>Caveats</h4>
+    <p>Whereas PTP-1B remains one of the large-scale successes of docking, it is not without its flaws, and one can come away with an overly rosy view of the technique. On one hand, we have never had such a high hit rate from docking before, nor have we had so high a hit rate again. Also, the comparison to HTS was not apples-to-apples, as two different sets of small molecules were used. Finally, the PTP-1B assay is tricky and often misleading, and without extensive follow-up-some of which was actually done for this study, as it happens, but not for all compounds-any hit should be taken with a grain of salt. What one can take from this study is that structure-based docking can lead to novel hits, and do it based on a relatively small number of tested molecules, in this case several hundred.</p>
+    <h4>Literature</h4>
+    <p>This work was published in:<br>
+        TN Doman, SL McGovern, et al. & BK Shoichet.
+Molecular Docking and High-Throughput Screening for Novel Inhibitors of
+Protein Tyrosine Phosphatase-1B.  J. Med. Chem.  45, 2213-2221 (2002).
+<a target=_blank href="http://pubs.acs.org/cgi-bin/abstract.cgi/jmcmar/2002/45/i11/abs/jm010548w.html">DOI</a></p>
+
+</div>
+{% endblock %}

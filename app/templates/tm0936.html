@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block title %}Tm0936{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Success Stories</li>
+      <li class="breadcrumb-item active" aria-current="page">Tm0936</li>
+  </ol>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Success Stories : Substrate prediction for enzyme Tm0936</h3>
+            <p>A pressing challenge in biology is predicting the function of the
+        proteins the genes encode.  It would be useful to be able to probe
+        for such function directly, based on protein structures.  In an
+        effort to do so, Johannes Hermann in the Shoichet Lab attempted
+        to predict substrates of the enzyme Tm0936 from <i>T. maritima</i>.  The
+        x-ray structure of this enzyme had been determined as part of a
+        structural genomics effort (PDB codes 1p1m and 1j6p), and it can
+        be assigned to the Amidohydrolase Superfamily (AHS) by fold
+        classification and by the identity of certain active site groups;
+        these metaloenzymes are united by the attack of a nucleophilic
+        hydroxide or water on an electrophilic center-beyond this, their
+        mechanisms are quite diverse.  Consequently, the substrates for
+        Tm0936 were anything but clear.  By sequence similarity, Tm0936
+        most resembles the large chlorohydrolase and cytosine deaminase
+        subgroup, which is often used to annotate amidohydrolases of
+        unknown function.  However, Raushel's group had tested 14
+        cytosine derivatives as Tm0936 substrates but observed no turnover.  </p>
+    <h4>Site & Ligand Innovations</h4>
+            <p>In an effort to find the true substrate, Johannes therefore docked
+        a database of high-energy intermediates into the structure of Tm0936,
+        sampling thousands of configurations and conformations of each
+        molecule.  Each of these was scored by electrostatic and van der
+        Waals complementarity, corrected for ligand desolvation energy,
+        and ranked accordingly.  There were two important innovations
+        here: first, the decision to restrict ourselves to the KEGG
+        metabolites database of about 10,000 possible molecules, and
+        second to dock these in their high-energy intermediate forms,
+        and not in their ground state structures.  We reasoned that we
+        were more likely to find substrates among primary metabolites
+        than in any other source of compounds, thus dramatically reducing
+        the search space.  We further reasoned that the enzyme was
+        pre-organized to recognize the excited, high-energy intermediate
+        form of the substrate, the docking of which would inform us of
+        the reaction being performed in addition to improving the
+        fidelity of the modeled interactions.  </p>
+        <table border="1">
+            <tr><td>Substrate tested</td>
+                <td>high-energy intermediate</td>
+                <td>Dock Rank</td>
+                <td>Relative docking scores (kcal mol-1)</td>
+                <td>Km (&micro;M)</td>
+                <td>kcat (s<sup>-1</sup>)</td>
+                <td>kcat/Km (M<sup>-1</sup>s<sup>-1</sup>)</td>
+            </tr>
+            <tr>
+                <td>S-adenosyl-homocysteine</td>
+                <td><img src="{{ url_for('static', filename='images/l5.png') }}"/></td>
+                <td>5</td><td>0</td><td>210&plusmn;40</td><td>12.2&plusmn;0.8</td><td>5.8 x 10<sup>4</sup></td>
+            </tr>
+            <tr>
+                <td>5-Methyl-thioadenosine</td>
+                <td><img src="{{ url_for('static', filename='images/l2.png') }}"/></td>
+                <td>6</td><td>4.4</td><td>44&plusmn;4</td><td>7.2&plusmn;0.2</td><td>1.4 x 10<sup>5</sup></td>
+            </tr>
+            <tr>
+                <td>Adenosine</td>
+                <td><img src="{{ url_for('static', filename='images/l3.png') }}"/></td>
+                <td>14</td><td>9.5</td><td>250&plusmn;40</td><td>2.3&plusmn;0.2</td><td>9.2 x 10<sup>3</sup></td>
+            </tr>
+            <tr>
+                <td>adenosine-5-monophosphate</td>
+                <td><img src="{{ url_for('static', filename='images/l4.png') }}"/></td>
+                <td>80</td><td>20.2</td><td>nd</td><td>&lt;10<sup>-3</sup></td><td>nd</td>
+            </tr>
+            <tr>
+                <td>S-adenosyl-l-methionine</td>
+                <td><img src="{{ url_for('static', filename='images/l1.png') }}"/></td>
+                <td>511</td><td>35.2</td><td>nd</td><td>&lt;10<sup>-3</sup></td><td>nd</td>
+            </tr>
+        </table>
+
+</div>
+{% endblock content %}

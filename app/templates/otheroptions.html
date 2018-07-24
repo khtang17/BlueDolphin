@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block title %}Other options{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Other options</li>
+  </ol>
+</nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+        <h3>Other options</h3>
+        <div class="row">
+            <div class ="col-12 col-sm-6 col-md-8">
+                <p>We hope you will consider Blue Dolphin for your next virtual screening project. We want you to know that there are other docking labs, other virtual screening software packages and other commercial fee-for-service outfits. This is not an endorsement of any other company or approach, we are merely pointing out that you have choices. We hope you find this information useful.</p>
+
+             <h3 class="article-title">Other Docking Labs</h3>
+                    <p>There are other acdademic docking labs that may be available for
+            fee-for-service virtual screening. Whereas we hope you will consider
+            us, you do have a choice:
+            </p>
+                <h3 class="article-title">Other software</h3>
+We like DOCK. We know it well, and we use it for all our work. But there
+are other docking programs to choose from. Here are some of the ones we know of:
+                <ul>
+                    <li><a href="http://www.ccdc.cam.ac.uk/">GOLD</a> from the Cambridge
+                Crystallographic Data Center</li>
+                    <li><a href="http://www.molsoft.com/">ICM</a> from MolSoft LLC</li>
+                    <li><a href="http://autodock.scripps.edu/">AutoDock</a> from TSRI</li>
+                    <li><a href="http://www.schrodinger.com/">Glide</a> from Schrodinger LLC</li>
+                    <li><a href="http://www.biosolveit.de/FlexX/">FlexX</a> from BioSolveIT</li>
+                    <li><a href="http://www.eyesopen.com/">FRED</a> from OpenEye Scientific Software</li>
+                    <li><a href="http://www.biopharmics.com/">Surflex</a> from BioPharmics LLC</li>
+                    <li><a href="http://www.bch.msu.edu/~kuhn/projects/slide/home.html">Slide</a> from Michigan State</li>
+                    <li><a href="http://www.chemcomp.com/">MOE-dock</a> from Chemical Computing Group</li>
+                    <li><a href="http://www.simbiosys.com/">eHiTS</a> from SimBioSys</li>
+                    <li><a href="http://www.q-pharm.com/">q-Screen</a> from Quantum Pharmaceuticals</li>
+                </ul>
+
+
+            <p>Please <a href="contact.shtml">Contact Us</a> to discuss how we can help you
+            with your next target-structure-based ligand discovery project.</p>
+            </div>
+             <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/lsx.png') }}" border="0">
+        </div>
+
+            </div>
+
+
+
+
+    </div>
+{% endblock %}

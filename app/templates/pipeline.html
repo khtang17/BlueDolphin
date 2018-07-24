@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Pipeline{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Pipeline</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Pipeline</h3>
+    <div class="row">
+        <div class ="col-12 col-sm-6 col-md-8">
+            <p>
+            <b>Blue Dolphin has no pipeline</b>.
+            This is because as a contract research organization (CRO),
+            we <b>assign all intellectual property (IP) to our clients</b>.
+            </p>
+        </div>
+         <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/fig3.png') }}" border="0">
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

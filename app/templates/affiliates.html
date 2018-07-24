@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Affiliates{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Contact</li>
+      <li class="breadcrumb-item active" aria-current="page">Affiliates</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Blue Dolphin's Affiliates</h3>
+    <div class="row">
+        <div class ="col-12 col-sm-6 col-md-8">
+        <p>
+            Blue Dolphin has the following affiliates.
+            </p>
+            <br />&nbsp;<br />
+            <a href="http://assaydepot.com"><img src="{{ url_for('static', filename='images/assaydepot.png') }}" border=0></a>
+            <br />&nbsp;<br />
+            <p>
+            If you would like to be a Blue Dolphin affiliate, please contact us:
+            <a href="mailto:bluedolphindiscovery@gmail.com">
+            bluedolphindiscovery@gmail.com</a>
+
+        </div>
+
+        <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/pwo.png') }}" border="0">
+        </div>
+    </div>
+</div>
+{% endblock %}

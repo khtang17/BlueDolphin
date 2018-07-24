@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}Model Cavity Sites{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Success Stories</li>
+      <li class="breadcrumb-item active" aria-current="page">Model Cavity Sites</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Success Stories : Model Cavity Sites</h3>
+
+        <p>To allow for rapid screens of molecular databases, docking undersamples possible degrees of freedom and uses overly simple scoring functions. These simplifications are widely thought to lead to its many false-positive predictions. Because these simplifications are entangled, and because of the complexity of the sites against which we are docking, when a docking prediction is wrong it is difficult to understand why it is so. A final problem in docking is that the gross under-sampling of chemical space in the docked libraries reduces the chance that there are any good ligands to find in them at all.        </p>
+            <p>
+To overcome these problems, one may turn to simple model cavity sites, which are useful learning tools for docking. These artificial cavities are engineered into the cores of proteins, and are completely cut off from bulk water. They are typically dominated by a single term: the L99A cavity in lysozyme is dominated by apolar interactions, the L99A/M102Q cavity has a single hydrogen bond acceptor in the otherwise apolar site, and the W191G cavity in cytochrome C peroxidase is dominated by charge-charge interactions. Each of these sites is between 150 to 180 Å3 in volume, and will only accommodate small ligands, typically not much larger than a naphthalene in size. These sites therefore have two great advantages as model systems for docking: they are simple enough that when a prediction is wrong, it typically points to a specific problem in docking, and they are small enough that there are most likely many hundreds of good ligands available for them in the commercially-available libraries.
+            </p>
+            <img src="{{ url_for('static', filename='images/l99a_1.png') }}" border="0" class ="mx-auto d-block"><br>
+            <h4>Docking results</h4>
+            <p>The Shoichet lab has screened compound libraries against these model sites, looking for false-positive and false-negative molecules that would point to specific problems in the docking. It has not been hard to find these failures. They have been enlightening and have led to a series of improvements in the method. What has been less emphasized is the fact that most of the docking predictions have been correct, both in the identification of new ligands and in predicting the ligand-protein geometries, over 50 of which have been determined by crystallography. How can we reconcile a 70% docking hit rate in these model sites with what is more like a 5% hit rate in drug-like sites like β-lactamase?</p>
+            <h4>Lessons & Caveats</h4>
+            <p>There are essentially two explanations for the very high hit rates in these model sites. First, they simply are easier to model than the more variegated, larger and more complicated drug sites. Second, there are many more likely ligands at this level of molecular complexity-typical ligands might weigh 110 amu-and there are simply many more of them than for the drug sites. Neither condition extends to drug like sites, and we do not expect these high hit rates in drug sites. Nevertheless, our ability to discover ligands in these sites, over and over again, is an indication that when true ligands are found in the database, docking can find them, and do so for the right reasons.</p>
+            <h4>Literature</h4>
+            <ul>
+                <li>BQ Wei, WA Baase, L Weaver, BW Matthews* & BK Shoichet*. A Model Binding Site for Testing Scoring Functions in Molecular Docking. J. Mol. Biol. 322, 339-355 (2002)</li>
+                <li>BQ Wei, L Weaver, AM Ferrari, BW Matthews* & BK Shoichet.* Testing a flexible-receptor docking algorithm in a model binding site. J. Mol. Biol. 337, 1161-82 (2004).</li>
+                <li>AM Ferrari, BQ Wei, L. Costantino & BK Shoichet.* Soft docking and multiple receptor conformations in virtual screening. J. Med. Chem. 47, 5076-84 (2004).</li>
+                <li>AP Graves, R Brenk & BK Shoichet*. Decoys for Docking. J. Med. Chem. 48, 3714-28 (2005).</li>
+                <li>R Brenk, S Vetter, SE Boyce, DB Goodin & BK Shoichet.*. Probing molecular docking in a charged model binding site. J. Mol. Biol. 357, 1449-70 (2006)</li>
+                <li>DL Mobley, AP Graves, JD Chodera, AC McReynolds, BK Shoichet*, KA Dill.* Predicting absolute ligand binding free energies to a simple model site. J Mol Biol. 371, 1118-34 (2007).</li>
+            </ul>
+
+
+
+
+</div>
+{% endblock %}

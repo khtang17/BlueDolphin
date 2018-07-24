@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Library Design{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Services</li>
+      <li class="breadcrumb-item active" aria-current="page">Library Design</li>
+  </ol>
+</nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <h3>Library Design</h3>
+    <div class="row">
+        <div class ="col-12 col-sm-6 col-md-8">
+        <p>
+            Whereas we typically work with commercially available compounds for virtual screening, occasionally collaborators are interested in generating proprietary virtual libraries. These can be optimized by several criteria, including chemical diversity, purchasability, ease and cost of synthesis, physico-chemical properties, ease of derivatization, presence or absence of specific chemical functional groups, among others.
+        </p>
+            <p>
+                Library design projects can vary considerably in scope and aims. If you would like to discuss screening library design please contact us at <a href="mailto:info@bluedolphinleads.com">info@bluedolphinleads.com</a>.
+            </p>
+
+        </div>
+
+        <div class="col-6 col-md-4">
+            <img src="{{ url_for('static', filename='images/lib1.png') }}" border="0">
+        </div>
+    </div>
+</div>
+{% endblock %}

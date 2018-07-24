@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-md navbar-light">
+    <img src="{{ url_for('static', filename='images/dolphin7.png') }}" width="200" height="150" class="d-inline-block align-top" alt="logo">&nbsp;
+    <a class="lead navbar-brand" href="{{ url_for('home') }}"><strong>Blue Dolphin</strong><br>Lead Discovery LLC.</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto" id="navbar-content">
+      <!--<li class="nav-item active">-->
+        <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#">Link</a>-->
+      <!--</li>-->
+      <li class=" nav-item dropdown active">
+        <a class="nav-link dropdown-toggle btn" href="{{ url_for('home') }}" id="homeDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+          Home
+        </a>
+        <div class="dropdown-menu " aria-labelledby="homeDropdown">
+          <a class="dropdown-item" href="{{ url_for('home') }}">About Blue Dolphin</a>
+          <a class="dropdown-item" href="{{ url_for('founders') }}">Founders</a>
+          <a class="dropdown-item" href="{{ url_for('technology') }}">Technology</a>
+          <a class="dropdown-item" href="{{ url_for('pipeline') }}">Pipeline</a>
+          <a class="dropdown-item" href="{{ url_for('otheroptions') }}">Other Docking Labs and Softwares</a>
+          <a class="dropdown-item" href="{{ url_for('caveat_lector') }}">Caveat Lector</a>
+        </div>
+      </li>
+      &nbsp;
+       <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle btn" href="{{ url_for('services') }}" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="{{ url_for('vscreen') }}">Virtual Screening</a>
+          <a class="dropdown-item" href="{{ url_for('libdesign') }}">Library Design</a>
+        </div>
+      </li>
+      &nbsp;
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle btn" href="{{ url_for('successstories') }}" id="storiesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Success Stories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="storiesDropdown">
+          <a class="dropdown-item" href="{{ url_for('successstories') }}">Success Stories</a>
+          <a class="dropdown-item" href="{{ url_for('ptp1b') }}">PTP-1B</a>
+          <a class="dropdown-item" href="{{ url_for('ampc') }}">AmpC beta-Lactamase</a>
+          <a class="dropdown-item" href="{{ url_for('model') }}">Model Cavity Sites</a>
+          <a class="dropdown-item" href="{{ url_for('tm0936') }}">Predict substrate: Tm0936</a>
+        </div>
+      </li>
+      &nbsp;
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn" href="{{ url_for('contacts') }}" id="contactDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Contact
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="contactDropdown">
+          <a class="dropdown-item" href="{{ url_for('contacts') }}">Contact Us</a>
+          <a class="dropdown-item" href="{{ url_for('affiliates') }}">Affiliates</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</nav>
