@@ -14,7 +14,8 @@
       <!--<li class="nav-item">-->
         <!--<a class="nav-link" href="#">Link</a>-->
       <!--</li>-->
-      <li class=" nav-item dropdown active">
+
+      <li class=" nav-item dropdown">
         <a class="nav-link dropdown-toggle btn" href="{{ url_for('home') }}" id="homeDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
           Home
         </a>
@@ -39,7 +40,7 @@
       </li>
       &nbsp;
       <li class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle btn" href="{{ url_for('successstories') }}" id="storiesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle btn dropdown-btn" href="{{ url_for('successstories') }}" id="storiesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
           Success Stories
         </a>
         <div class="dropdown-menu" aria-labelledby="storiesDropdown">

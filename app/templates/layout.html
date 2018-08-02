@@ -27,11 +27,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script>
     {% block js %}
+       $("#navbar-content li a").on('click', function(e){
+    $("#navbar-content .active").removeClass('active');
+    $(this).parent().addClass('active'); 
+    
+});
 
-   $("#navbar-content").on("click", function(){
-      $("#navbar-content li").find(".active").removeClass("active");
-       $(this).addClass("active");
-  });
+
 
   {% endblock %}
   </script>
